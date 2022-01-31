@@ -1,0 +1,123 @@
+-- Function: public.sp_get_ugc_id(character varying)
+
+-- DROP FUNCTION public.sp_get_ugc_id(character varying);
+
+CREATE OR REPLACE FUNCTION public.sp_get_ugc_id("studentID" character varying)
+  RETURNS character varying AS
+$BODY$ 
+DECLARE procode text;
+DECLARE prougccode integer;  
+DECLARE stucode text;
+DECLARE stutemp integer;
+DECLARE stutemp2 integer;
+
+BEGIN
+
+	procode = split_part($1, '-', 2);
+				
+	IF(procode = '112') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='115'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+
+	ELSEIF(procode = '124') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='121'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+		--return stucode;
+	ELSEIF(procode = '119') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='118'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+		--return stucode;
+	ELSEIF(procode = '142') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='141'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+		--return stucode;
+	ELSEIF(procode = '133') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='132'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+		--return stucode;
+
+	ELSEIF(procode = '128') THEN
+
+		SELECT  split_part(s."studentID", '-', 3)::integer into stutemp
+		  FROM public.tbl_o_student as s
+		  WHERE 
+		  s."stu_academicTerm"= SUBSTRING(split_part($1, '-', 1),3,3) :: INTEGER
+		  AND s."stu_academicYear"= 2000 + SUBSTRING(split_part($1, '-', 1),1,2):: INTEGER
+		  AND s."programmeCode"='127'
+		  ORDER By s."studentID" DESC LIMIT 1;
+		  
+		stucode = stutemp + split_part($1, '-', 3)::integer;
+
+		stucode = lpad(stucode::text, 3, '0');
+		--return stucode;
+		
+	ELSE 
+		stucode =split_part($1, '-', 3);
+	END IF;
+
+		SELECT distinct t."pro_ugcCode"
+		    into prougccode
+		    FROM 
+			tbl_c_programme as t 
+		where  
+		  t."programmeCode"=procode limit 1;
+
+		RETURN '037'||split_part($1, '-', 1)||'00'||lpad(prougccode::text, 5, '0')|| stucode;    
+	
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION public.sp_get_ugc_id(character varying)
+  OWNER TO postgres;

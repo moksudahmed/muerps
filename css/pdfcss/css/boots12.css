@@ -1,0 +1,131 @@
+.table tbody tr.success > td {
+background-color: #dff0d8;
+}
+.table-bordered th, .table-bordered td {
+border-left: 1px solid #dddddd;
+}
+.table th, .table td {
+padding: 8px;
+line-height: 20px;
+text-align: left;
+vertical-align: top;
+border-top: 1px solid #dddddd;
+}
+index.phpmedia="screen, projection"
+th, td, caption {
+padding: 4px 10px 4px 5px;
+}
+index.phpmedia="screen, projection"
+table, th, td {
+vertical-align: middle;
+}
+index.phpmedia="screen, projection"
+caption, th, td {
+text-align: left;
+font-weight: normal;
+float: none !important;
+}
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+* {
+margin: 0;
+padding: 0;
+}
+user agent stylesheettd, th {
+display: table-cell;
+vertical-align: inherit;
+}
+Inherited from tr.success
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from tbody
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from table.table.table-bordered
+.table-bordered {
+border-collapse: separate;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+index.phpmedia="screen, projection"
+table {
+border-collapse: separate;
+border-spacing: 0;
+}
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+user agent stylesheettable {
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+Inherited from div#content
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from div.span-19
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from div#page.container
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from body
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 20px;
+color: #333333;
+}
+body {
+color: #555;
+font: normal 10pt Arial,Helvetica,sans-serif;
+}
+index.phpmedia="screen, projection"
+body {
+font-size: 75%;
+color: #222;
+font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+index.phpmedia="screen, projection"
+body {
+line-height: 1.5;
+}
+index.phpmedia="screen, projection"
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+font-size: 100%;
+font: inherit;
+}
+Inherited from html
+html {
+font-size: 100%;
+}
+index.phpmedia="screen, projection"
+html {
+font-size: 100.01%;
+}
